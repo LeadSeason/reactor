@@ -14,7 +14,7 @@ reactor.setActive(true)
 local n = 60
 
 while (n >= 1) do
-    iop(tostring(n))
+    iop(tostring(n) + " | " + tostring(reactor.getEnergyStored()))
     os.sleep(1)
     n = n-1
 end

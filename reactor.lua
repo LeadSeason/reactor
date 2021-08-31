@@ -10,7 +10,7 @@ while (n >= 1) do
         reactor.setActive(false)
         print(tosring(renergy))
         print("reactor: false")
-    elseif (reactor.getEnergyStored() < 7500000) do
+    elseif (renergy < 7500000) do
         reactor.setActive(true)
         print(tosring(renergy))
         print("reactor: true")

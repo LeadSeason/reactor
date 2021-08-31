@@ -3,11 +3,16 @@ local reactor = component.br_reactor
 
 reactor.setActive(true)
 
-local n = 60
-
 while (n >= 1) do
-    print(tostring(reactor.getEnergyStored()))
-    os.sleep(1)
+    if (reactor.getEnergyStored() > 7500000) do
+        reactor.setActive(false)
+        print(tosring(reactor.getEnergyStored()))
+        print("reactor: false")
+    elseif (reactor.getEnergyStored() < 7500000) do
+        reactor.setActive(true)
+        print(tosring(reactor.getEnergyStored()))
+        print("reactor: true")
+    end
 end
 
 reactor.setActive(false)
